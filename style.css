@@ -9,8 +9,14 @@ body{
   line-height: 1.6em;
   margin: 0;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
   display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 a{
@@ -126,6 +132,14 @@ hr{
 #categories{
   padding-bottom: 50px;
   text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+#categories.fade{
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
 }
 
 #about-me{

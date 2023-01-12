@@ -16,6 +16,12 @@
       document.getElementById(id).scrollIntoView();
     }
   </script>
+  <script>
+    function fadeFunction(id) {
+      var element = document.getElementById(id);
+      element.classList.toggle('fade');
+    }
+  </script>
 </head>
 <body>
   <div id="main-header">
@@ -26,7 +32,7 @@
     <div id="start-screen">
       <!-- Intro -->
       <section id="intro">
-        <button class="button-img">
+        <button onclick="fadeFunction('categories')" class="button-img">
           <img src="images/mickey.jpg" alt="mickey" id="main-img">  
         </button>
       </section>
@@ -43,14 +49,12 @@
         <h2>About Me!</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a sunt voluptas eos! Dolores voluptas doloremque voluptatem dolore sit laudantium, fugiat consequuntur pariatur placeat cupiditate nesciunt error dignissimos vitae fuga?</p>
       </section>
-      <hr>
     </div>
     <div id="hobbies">
       <section class="box-1">
         <h2>Hobbies</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a sunt voluptas eos! Dolores voluptas doloremque voluptatem dolore sit laudantium, fugiat consequuntur pariatur placeat cupiditate nesciunt error dignissimos vitae fuga?</p>
       </section>
-      <hr>
     </div>
     <div id="fun-facts">
       <section class="box-1">
@@ -59,6 +63,7 @@
       </section>
     </div>
     <!-- Footer -->
+    <hr>
     <footer id="main-footer">
       <p>Copyright &copy; 2022</p>
     </footer>
@@ -77,7 +82,7 @@
           topButton.style.display = "none";
         }
       }
-  
+
       function toTopFunction() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
