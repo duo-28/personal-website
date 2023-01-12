@@ -120,7 +120,7 @@ hr{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 #main-img:active{
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 #intro{
@@ -134,12 +134,12 @@ hr{
   text-align: center;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
 }
 #categories.fade{
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.5s linear;
+  transition-delay: 0s;
 }
 
 #about-me{
