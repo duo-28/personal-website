@@ -69,10 +69,20 @@ hr{
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  --transitionTime: 400ms;
+  transition: visibility 0s linear calc(var(--transitionTime) * 3), opacity 0.5s linear calc((2 - var(--order)) * var(--transitionTime));
+}
+.button-1.fade{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 0.5s linear calc(var(--order) * var(--transitionTime));
 }
 .button-1:hover{
   border: 2px solid #4B7EA0;
 }
+
 
 .box-1{
   text-align: center;
@@ -121,14 +131,6 @@ hr{
 #categories{
   padding-bottom: 50px;
   text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
-}
-#categories.fade{
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s;
 }
 
 #about-me{
