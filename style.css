@@ -71,13 +71,12 @@ hr{
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
-  --transitionTime: 400ms;
-  transition: visibility 0s linear calc(var(--transitionTime) * 3), opacity 0.5s linear calc((2 - var(--order)) * var(--transitionTime));
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
 }
 .button-1.fade{
   visibility: visible;
   opacity: 1;
-  transition: visibility 0s linear 0s, opacity 0.5s linear calc(var(--order) * var(--transitionTime));
+  transition: visibility 0s linear 0s, opacity 0.5s linear calc(var(--order) * 300ms);
 }
 .button-1:hover{
   border: 2px solid #4B7EA0;
