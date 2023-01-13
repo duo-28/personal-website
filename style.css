@@ -1,9 +1,32 @@
+:root{
+  --blue-bg: #0D2745;
+  --blue-border: #143e6f;
+  --blue-theme: #4B7EA0;
+  --blue-text: #82A9C0;
+
+  --green-bg: #46452C;
+  --green-border: #607613;
+  --green-theme: #8AAA1B;
+  --green-text: #B4B288;
+
+  /* Default mode */
+  --bg-color: var(--blue-bg);
+  --border-color: var(--blue-border);
+  --theme-color: var(--blue-theme);
+  --text-color: var(--blue-text);
+}
+:root.theme-switch{
+  --bg-color: var(--green-bg);
+  --border-color: var(--green-border);
+  --theme-color: var(--green-theme);
+  --text-color: var(--green-text);
+}
 html {
   scroll-behavior: smooth;
 }
 body{
-  background-color: #0D2745;
-  color: #82A9C0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   line-height: 1.6em;
@@ -20,17 +43,18 @@ body {
 }
 
 a{
-  color: #82A9C0;
+  color: var(--text-color);
   text-decoration: none;
+  cursor: pointer;
 }
 a:hover{
-  color: #4B7EA0;
+  color: var(--border-color);
 }
 
 button{
-  background-color: #0D2745;
-  color: #82A9C0;
-  border: 1px solid #143e6f;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
   padding: 10px 10px;
   text-align: center;
   display: inline;
@@ -39,15 +63,15 @@ button{
   transition-duration: 0.4s;
 }
 button:hover{
-  border: 1px solid #4B7EA0;
+  border: 1px solid var(--theme-color);
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 button:active{
-  background-color: #143e6f;
+  background-color: var(--border-color);
 }
 
 hr{
-  border: 1px solid #82A9C0;
+  border: 1px solid var(--text-color);
 }
 
 .container{
@@ -61,7 +85,7 @@ hr{
   font-size:medium;
   font-weight: bold;
   line-height: 1.6em;
-  border: 2px solid #143e6f;
+  border: 2px solid var(--border-color);
   box-sizing: border-box;
   width: 120px;
   aspect-ratio : 1 / 1;
@@ -79,7 +103,7 @@ hr{
   transition: visibility 0s linear 0s, opacity 0.5s linear calc(var(--order) * 300ms);
 }
 .button-1:hover{
-  border: 2px solid #4B7EA0;
+  border: 2px solid var(--theme-color);
 }
 
 
@@ -95,7 +119,7 @@ hr{
 
 #main-header{
   overflow: hidden;
-  background-color: #4B7EA0;
+  background-color: var(--theme-color);
   top: 0;
   position: fixed;
   padding: 1px 20px;
@@ -109,12 +133,12 @@ hr{
   border-radius: 50%;
   width:300px;
   aspect-ratio : 1 / 1;
-  border: 2px solid #0D2745;
+  border: 2px solid var(--bg-color);
   cursor: pointer;
   transition-duration: 0.4s;
 }
 #main-img:hover{
-  border: 2px solid #4B7EA0;
+  border: 2px solid var(--theme-color);
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 #main-img:active{
@@ -154,7 +178,7 @@ hr{
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #143e6f;
+  background-color: var(--border-color);
   border-radius: 10px;
   font-size: 18px;
   opacity: 0.85;

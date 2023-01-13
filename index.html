@@ -25,17 +25,52 @@
       }
     }
   </script>
+  <script>
+    function applyImg() {
+      var element = document.getElementById("main-img");
+      const mickeyImg = "images/mickey.jpg";
+      element.src = "images/mickey.jpg";
+    }
+    function switchTheme() {
+      var element = document.getElementById("main-img");
+      const mickeyImg = "./images/mickey.jpg";
+      const dewImg = "./images/bamboo-dew.jpeg";
+      if (element.style.getPropertyValue('--img') == "mickey") {
+        element.src = dewImg;
+        element.style.setProperty('--img', 'bamboo');
+        var color = getComputedStyle(document.documentElement).getPropertyValue('--green-bg');
+        document.documentElement.style.setProperty('--bg-color', color);
+        color = getComputedStyle(document.documentElement).getPropertyValue('--green-border');
+        document.documentElement.style.setProperty('--border-color', color);
+        color = getComputedStyle(document.documentElement).getPropertyValue('--green-theme');
+        document.documentElement.style.setProperty('--theme-color', color);
+        color = getComputedStyle(document.documentElement).getPropertyValue('--green-text');
+        document.documentElement.style.setProperty('--text-color', color);
+      } else {
+        element.src = mickeyImg;
+        element.style.setProperty('--img', 'mickey');
+        var color = getComputedStyle(document.documentElement).getPropertyValue('--blue-bg');
+        document.documentElement.style.setProperty('--bg-color', color);
+        color = getComputedStyle(document.documentElement).getPropertyValue('--blue-border');
+        document.documentElement.style.setProperty('--border-color', color);
+        color = getComputedStyle(document.documentElement).getPropertyValue('--blue-theme');
+        document.documentElement.style.setProperty('--theme-color', color);
+        color = getComputedStyle(document.documentElement).getPropertyValue('--blue-text');
+        document.documentElement.style.setProperty('--text-color', color);
+      }
+    }
+  </script>
 </head>
 <body>
   <div id="main-header">
-    <h1>Hi</h1>
+    <h1><a onclick="switchTheme()">Hi</a></h1>
   </div>
   
   <div class="container">
     <div id="start-screen">
       <!-- Intro -->
       <section id="intro">
-        <img onclick="fadeFunction('button-1')" src="images/mickey.jpg" alt="mickey" id="main-img">
+        <img onclick="fadeFunction('button-1')" src="images/mickey.jpg" style="--img:mickey" alt="mickey" id="main-img">
       </section>
       <!-- Options -->
       <section id="categories">
