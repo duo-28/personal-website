@@ -36,6 +36,7 @@ button{
   display: inline;
   font-family: 'Courier New', Courier, monospace;
   font-size: 12px;
+  transition-duration: 0.4s;
 }
 button:hover{
   border: 1px solid #4B7EA0;
@@ -54,19 +55,6 @@ hr{
   margin: auto;
   margin-top: 50px;
   overflow: hidden;
-}
-
-.button-img{
-  border: none;
-  padding: 0;
-  cursor: default;
-}
-.button-img:hover{
-  border: none;
-  box-shadow: none;
-}
-.button-img:active{
-  background-color: transparent;
 }
 
 .button-1{
@@ -114,6 +102,7 @@ hr{
   aspect-ratio : 1 / 1;
   border: 2px solid #0D2745;
   cursor: pointer;
+  transition-duration: 0.4s;
 }
 #main-img:hover{
   border: 2px solid #4B7EA0;
@@ -145,11 +134,9 @@ hr{
 #about-me{
   display: none;
 }
-
 #hobbies{
   display: none;
 }
-
 #fun-facts{
   display: none;
 }
@@ -170,6 +157,7 @@ hr{
   border-radius: 10px;
   font-size: 18px;
   opacity: 0.85;
+  cursor: pointer;
 }
 #top-button:hover{
   opacity: 1;
