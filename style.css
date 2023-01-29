@@ -15,12 +15,6 @@
   --theme-color: var(--blue-theme);
   --text-color: var(--blue-text);
 }
-:root.theme-switch{
-  --bg-color: var(--green-bg);
-  --border-color: var(--green-border);
-  --theme-color: var(--green-theme);
-  --text-color: var(--green-text);
-}
 html {
   scroll-behavior: smooth;
 }
@@ -81,6 +75,40 @@ hr{
   overflow: hidden;
 }
 
+.grid{
+  margin: 100px auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 10px;
+}
+.invis-grid{
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+
+.item{
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+.item p{
+  text-align: left;
+}
+.item ul{
+  list-style: circle;
+  padding-inline-start: 10px;
+  text-align: left;
+  list-style-position: outside;
+}
+.invis-item{
+  border: transparent;
+  padding: 0px;
+  text-align: left;
+  justify-items: start;
+}
+
 .button-1{
   font-size:medium;
   font-weight: bold;
@@ -106,7 +134,6 @@ hr{
   border: 2px solid var(--theme-color);
 }
 
-
 .box-1{
   text-align: center;
   padding-top: 100px;
@@ -124,6 +151,7 @@ hr{
   position: fixed;
   padding: 1px 20px;
   width: 100%;
+  z-index: 99;
 }
 #main-header h1{
   font-size: 25px;

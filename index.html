@@ -4,62 +4,7 @@
   <link rel="stylesheet" href="style.css">
   <title>My Website</title>
   <!-- Scripts -->
-  <script>
-    // Scroll to section with matching id
-    const idArray = ["about-me", "hobbies", "fun-facts"];
-
-    function scrollToFunction(id) {
-      for (const i of idArray) {
-        document.getElementById(i).style.display = "none";
-      }
-      document.getElementById(id).style.display = "block";
-      document.getElementById(id).scrollIntoView();
-    }
-  </script>
-  <script>
-    function fadeFunction(className) {
-      var classArray = document.getElementsByClassName(className);
-      for (var i = 0; i < classArray.length; i++) {
-        var element = classArray.item(i);
-        element.classList.toggle('fade');
-      }
-    }
-  </script>
-  <script>
-    function applyImg() {
-      var element = document.getElementById("main-img");
-      const mickeyImg = "images/mickey.jpg";
-      element.src = "images/mickey.jpg";
-    }
-    function switchTheme() {
-      var element = document.getElementById("main-img");
-      const mickeyImg = "./images/mickey.jpg";
-      const dewImg = "./images/bamboo-dew.jpeg";
-      if (element.style.getPropertyValue('--img') == "mickey") {
-        element.src = dewImg;
-        element.style.setProperty('--img', 'bamboo');
-        var color = getComputedStyle(document.documentElement).getPropertyValue('--green-bg');
-        document.documentElement.style.setProperty('--bg-color', color);
-        color = getComputedStyle(document.documentElement).getPropertyValue('--green-border');
-        document.documentElement.style.setProperty('--border-color', color);
-        color = getComputedStyle(document.documentElement).getPropertyValue('--green-theme');
-        document.documentElement.style.setProperty('--theme-color', color);
-        color = getComputedStyle(document.documentElement).getPropertyValue('--green-text');
-        document.documentElement.style.setProperty('--text-color', color);
-      } else {
-        element.src = mickeyImg;
-        element.style.setProperty('--img', 'mickey');
-        var color = getComputedStyle(document.documentElement).getPropertyValue('--blue-bg');
-        document.documentElement.style.setProperty('--bg-color', color);
-        color = getComputedStyle(document.documentElement).getPropertyValue('--blue-border');
-        document.documentElement.style.setProperty('--border-color', color);
-        color = getComputedStyle(document.documentElement).getPropertyValue('--blue-theme');
-        document.documentElement.style.setProperty('--theme-color', color);
-        color = getComputedStyle(document.documentElement).getPropertyValue('--blue-text');
-        document.documentElement.style.setProperty('--text-color', color);
-      }
-    }
-  </script>
+  <script src="js/head.js"></script>
 </head>
 <body>
   <div id="main-header">
@@ -82,7 +27,15 @@
     <!-- Info -->
     <section class="box-1" id="about-me">
       <h2>About Me!</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a sunt voluptas eos! Dolores voluptas doloremque voluptatem dolore sit laudantium, fugiat consequuntur pariatur placeat cupiditate nesciunt error dignissimos vitae fuga?</p>
+      <div class="grid">
+        <div class="item" id="">
+          <h3>Welcome</h3>
+          <p>Hi! Welcome to </p>
+        </div>
+        <div class="item" id="">Item 2</div>
+        <div class="item" id="">Item 3</div>
+        <div class="item" id=""></div>
+      </div>
     </section>
     <section class="box-1" id="hobbies">
       <h2>Hobbies</h2>
@@ -95,28 +48,10 @@
     <!-- Footer -->
     <hr>
     <footer id="main-footer">
-      <p>Copyright &copy; 2022</p>
+      <p>Copyright &copy; 2022 owe n</p>
     </footer>
     <!-- Return button -->
     <button onclick="toTopFunction()" id="top-button">Return to top</button>
-    <script>
-      // Scroll to top of page
-      let topButton = document.getElementById("top-button");
-  
-      window.onscroll = function() {scrollFunction()};
-  
-      function scrollFunction() {
-        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
-          topButton.style.display = "block";
-        } else {
-          topButton.style.display = "none";
-        }
-      }
-
-      function toTopFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      }
-    </script>
+    <script src="js/returnButton.js"></script>
   </div> <!-- Container div -->
 </html>
