@@ -1,25 +1,24 @@
 
-// Scroll to section with matching id
-const idArray = ["about-me", "hobbies", "fun-facts"];
-
-function scrollToFunction(id) {
-  // Hide sections
+function hideSections(idArray) {
   for (const i of idArray) {
     document.getElementById(i).style.display = "none";
   }
+}
+
+// Scroll to section with matching id
+function scrollToFunction(id, idArray) {
+  hideSections(idArray)
   document.getElementById(id).style.display = "block";
   document.getElementById(id).scrollIntoView();
 }
 
-function fadeFunction(className) {
-  // Hide sections
-  for (const i of idArray) {
-    document.getElementById(i).style.display = "none";
-  }
+function fadeFunction(className, idArray) {
+  hideSections(idArray)
   // Fade out/in items in given class
   var classArray = document.getElementsByClassName(className);
   for (var i = 0; i < classArray.length; i++) {
     var element = classArray.item(i);
+    console.log(element.classList);
     element.classList.toggle('fade');
   }
 }

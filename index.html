@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="carousel.css">
   <title>My Website</title>
   <!-- Scripts -->
   <script src="js/head.js"></script>
+  <script src="js/carousel.js"></script>
 </head>
 <body>
   <div id="main-header">
@@ -15,26 +17,31 @@
     <div id="start-screen">
       <!-- Intro -->
       <section id="intro">
-        <img onclick="fadeFunction('button-1')" src="images/mickey.jpg" style="--img:mickey" alt="mickey" id="main-img">
+        <img onclick="fadeFunction('button-1', ['about-me', 'hobbies', 'fun-facts'])" src="images/mickey.jpg" style="--img:mickey" alt="mickey" id="main-img">
       </section>
       <!-- Options -->
       <section id="categories">
-        <button onclick="scrollToFunction('about-me')" class="button-1" style="--order: 0">About me</button>
-        <button onclick="scrollToFunction('hobbies')" class="button-1" style="--order: 1">Hobbies</button>
-        <button onclick="scrollToFunction('fun-facts')" class="button-1" style="--order: 2">Fun Facts</button>
+        <button onclick="scrollToFunction('about-me', ['about-me', 'hobbies', 'fun-facts']); showSlides(1)" class="button-1" style="--order: 0">About me</button>
+        <button onclick="scrollToFunction('hobbies', ['about-me', 'hobbies', 'fun-facts']); showSlides(1)" class="button-1" style="--order: 1">Hobbies</button>
+        <button onclick="scrollToFunction('fun-facts', ['about-me', 'hobbies', 'fun-facts']); showSlides(1)" class="button-1" style="--order: 2">Fun Facts</button>
       </section>
     </div>
     <!-- Info -->
     <section class="box-1" id="about-me">
       <h2>About Me!</h2>
-      <div class="grid">
-        <div class="item" id="">
-          <h3>Welcome</h3>
-          <p>Hi! Welcome to </p>
-        </div>
-        <div class="item" id="">Item 2</div>
-        <div class="item" id="">Item 3</div>
-        <div class="item" id=""></div>
+      <div class="carousel">
+        <button class="left-button" onclick="plusSlides(-1)">&#10094; </button>
+        <button class="carousel-button">
+          <h3>Hi!</h3>
+        </button>
+        <button class="carousel-button">
+          <h3>Bye!</h3>
+        </button>
+        <button class="right-button" onclick="plusSlides(1)"> &#10095;</button>
+      </div>
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
       </div>
     </section>
     <section class="box-1" id="hobbies">

@@ -15,6 +15,7 @@
   --theme-color: var(--blue-theme);
   --text-color: var(--blue-text);
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -73,40 +74,6 @@ hr{
   margin: auto;
   margin-top: 50px;
   overflow: hidden;
-}
-
-.grid{
-  margin: 100px auto;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 10px;
-}
-.invis-grid{
-  display: grid;
-  grid-template-columns: 30% 1fr;
-}
-
-.item{
-  background-color: var(--bg-color);
-  border: 2px solid var(--border-color);
-  padding: 20px;
-  border-radius: 10px;
-}
-.item p{
-  text-align: left;
-}
-.item ul{
-  list-style: circle;
-  padding-inline-start: 10px;
-  text-align: left;
-  list-style-position: outside;
-}
-.invis-item{
-  border: transparent;
-  padding: 0px;
-  text-align: left;
-  justify-items: start;
 }
 
 .button-1{
