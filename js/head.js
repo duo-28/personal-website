@@ -18,7 +18,6 @@ function fadeFunction(className, idArray) {
   var classArray = document.getElementsByClassName(className);
   for (var i = 0; i < classArray.length; i++) {
     var element = classArray.item(i);
-    console.log(element.classList);
     element.classList.toggle('fade');
   }
 }

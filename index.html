@@ -21,36 +21,62 @@
       </section>
       <!-- Options -->
       <section id="categories">
-        <button onclick="scrollToFunction('about-me', ['about-me', 'hobbies', 'fun-facts']); showSlides(1)" class="button-1" style="--order: 0">About me</button>
-        <button onclick="scrollToFunction('hobbies', ['about-me', 'hobbies', 'fun-facts']); showSlides(1)" class="button-1" style="--order: 1">Hobbies</button>
-        <button onclick="scrollToFunction('fun-facts', ['about-me', 'hobbies', 'fun-facts']); showSlides(1)" class="button-1" style="--order: 2">Fun Facts</button>
+        <button onclick="scrollToFunction('about-me', ['about-me', 'hobbies', 'fun-facts']); currentSlide(1, [1, 2])" class="button-1" style="--order: 0">About me</button>
+        <button onclick="scrollToFunction('hobbies', ['about-me', 'hobbies', 'fun-facts']); currentSlide(3, [3, 4])" class="button-1" style="--order: 1">Hobbies</button>
+        <button onclick="scrollToFunction('fun-facts', ['about-me', 'hobbies', 'fun-facts']); currentSlide(5, [5, 6])" class="button-1" style="--order: 2">Fun Facts</button>
       </section>
     </div>
     <!-- Info -->
     <section class="box-1" id="about-me">
       <h2>About Me!</h2>
       <div class="carousel">
-        <button class="left-button" onclick="plusSlides(-1)">&#10094; </button>
-        <button class="carousel-button">
+        <button class="left-button" onclick="plusSlides(-1, [1, 2])">&#10094; </button>
+        <button class="carousel-button fade">
           <h3>Hi!</h3>
         </button>
-        <button class="carousel-button">
+        <button class="carousel-button fade">
           <h3>Bye!</h3>
         </button>
-        <button class="right-button" onclick="plusSlides(1)"> &#10095;</button>
+        <button class="right-button" onclick="plusSlides(1, [1, 2])"> &#10095;</button>
       </div>
       <div class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(1, [1, 2])"></span>
+        <span class="dot" onclick="currentSlide(2, [1, 2])"></span>
       </div>
     </section>
     <section class="box-1" id="hobbies">
       <h2>Hobbies</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a sunt voluptas eos! Dolores voluptas doloremque voluptatem dolore sit laudantium, fugiat consequuntur pariatur placeat cupiditate nesciunt error dignissimos vitae fuga?</p>
+      <div class="carousel">
+        <button class="left-button" onclick="plusSlides(-1, [3, 4])">&#10094; </button>
+        <button class="carousel-button fade">
+          <h3>Hi!2</h3>
+        </button>
+        <button class="carousel-button fade">
+          <h3>Bye!2</h3>
+        </button>
+        <button class="right-button" onclick="plusSlides(1, [3, 4])"> &#10095;</button>
+      </div>
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(3, [3, 4])"></span>
+        <span class="dot" onclick="currentSlide(4, [3, 4])"></span>
+      </div>
     </section>
     <section class="box-1" id="fun-facts">
       <h2>Fun Facts</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a sunt voluptas eos! Dolores voluptas doloremque voluptatem dolore sit laudantium, fugiat consequuntur pariatur placeat cupiditate nesciunt error dignissimos vitae fuga?</p>
+      <div class="carousel">
+        <button class="left-button" onclick="plusSlides(-1, [5, 6])">&#10094; </button>
+        <button class="carousel-button fade">
+          <h3>Hi!3</h3>
+        </button>
+        <button class="carousel-button fade">
+          <h3>Bye!3</h3>
+        </button>
+        <button class="right-button" onclick="plusSlides(1, [5, 6])"> &#10095;</button>
+      </div>
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(5, [5, 6])"></span>
+        <span class="dot" onclick="currentSlide(6, [5, 6])"></span>
+      </div>
     </section>
     <!-- Footer -->
     <hr>
