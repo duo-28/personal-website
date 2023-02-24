@@ -78,7 +78,7 @@
   animation-duration: 0.5s;
 }
 
-@keyframes fade {
+@keyframes fade-carousel {
   from {opacity: .4}
   to {opacity: 1}
 }

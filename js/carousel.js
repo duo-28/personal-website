@@ -17,6 +17,8 @@ function currentSlide(n, slideArray) {
 // eg. carousel_1 has 3 slides, so the start is 1, end is 3
 // carousel_2 has 4 slides, so the start is 4, end is 7
 // Bro this is such a bad way of making multiple carousels but idk+cbb
+// Like adding 1 slide to an earlier carousel means i gotta change all the numbers
+// But luckily about me and hobbies probably wont change much righht
 function showSlides(n, start, end) {
   let i;
   let slides = document.getElementsByClassName("carousel-button");
