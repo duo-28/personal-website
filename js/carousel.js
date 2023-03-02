@@ -3,26 +3,29 @@
 
 let slideIndex = 1;
 
+let carousels = {
+  1: [1, 2],
+  2: [3, 4],
+  3: [5, 6]
+};
+
 // Next/previous controls
-function plusSlides(n, slideArray) {
-  showSlides(slideIndex += n, slideArray[0], slideArray[1]);
+function plusSlides(n, carouselIndex) {
+  showSlides(slideIndex += n, carousels[carouselIndex][0], carousels[carouselIndex][1]);
 }
 
 // Thumbnail image controls
-function currentSlide(n, slideArray) {
-  showSlides(slideIndex = n, slideArray[0], slideArray[1]);
+function currentSlide(n, carouselIndex) {
+  showSlides(slideIndex = n, carousels[carouselIndex][0], carousels[carouselIndex][1]);
 }
 
 // Shows nth slide of carousel given start and end of carousel
 // eg. carousel_1 has 3 slides, so the start is 1, end is 3
 // carousel_2 has 4 slides, so the start is 4, end is 7
 // Bro this is such a bad way of making multiple carousels but idk+cbb
-// Like adding 1 slide to an earlier carousel means i gotta change all the numbers
-// But luckily about me and hobbies probably wont change much righht
 function showSlides(n, start, end) {
   let i;
   let slides = document.getElementsByClassName("carousel-button");
-  //slides = slides.slice(slideArray[0], slideArray[1]);
 
   let dots = document.getElementsByClassName("dot");
   // Wrap around for slides
