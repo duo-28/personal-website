@@ -30,6 +30,7 @@
   font-size: 50px;
   font-weight: bold;
   margin: 10px;
+  margin-top: -45px;
 }
 
 .close:hover,
@@ -54,6 +55,24 @@
 .modal-footer {
   padding: 2px 16px;
   background-color: var(--theme-color);
+}
+
+.img-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+@media (max-width: 650px) {
+  .img-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 @keyframes slideIn {

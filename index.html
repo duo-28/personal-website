@@ -25,7 +25,7 @@
       <section id="categories">
         <button onclick="scrollToFunction('about-me', ['about-me', 'hobbies', 'projects']); currentSlide(1, 1)" class="button-1" style="--order: 0">About me</button>
         <button onclick="scrollToFunction('hobbies', ['about-me', 'hobbies', 'projects']); currentSlide(3, 2)" class="button-1" style="--order: 1">Hobbies</button>
-        <button onclick="scrollToFunction('projects', ['about-me', 'hobbies', 'projects']); currentSlide(5, 3)" class="button-1" style="--order: 2">Projects</button>
+        <button onclick="scrollToFunction('projects', ['about-me', 'hobbies', 'projects']); currentSlide(6, 3)" class="button-1" style="--order: 2">Projects</button>
       </section>
     </div>
     <!-- Info -->
@@ -34,28 +34,39 @@
       <h2>About Me!</h2>
       <div class="carousel">
         <button class="left-button" onclick="plusSlides(-1, 1)">&#10094; </button>
-        <!-- Slide: Hi -->
+        <!-- Slide: whoami -->
         <button onclick="openModal('modal1')" class="carousel-button fade-carousel">
-          <h3>Hi!</h3>
+          <h3>whoami</h3>
         </button>
         <div id="modal1" class="modal">
           <div class="modal-content">
             <div class="modal-header">
-              <span class="close" onclick="closeModal('modal1')">&times;</span>
               <h2>whoami</h2>
+              <span class="close" onclick="closeModal('modal1')">&times;</span>
             </div>
             <div class="modal-body">
-              <p>Name: Owen Ni</p>
-              <p>Degree: Computer science / Mechatronics Engineering</p>
+              <p>Name: Owen</p>
+              <p>Degree: Computer science / Mechatronics engineering</p>
               <p>Year: 2nd</p>
-
+              <p>Birthday: take a guess</p>
             </div>
           </div>
         </div>
-        <!-- Slide:  -->
-        <button class="carousel-button fade-carousel">
-          <h3>Bye!</h3>
+        <!-- Slide: Fun facts! -->
+        <button onclick="openModal('modal2')" class="carousel-button fade-carousel">
+          <h3>Fun facts!</h3>
         </button>
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Fun facts!</h2>
+              <span class="close" onclick="closeModal('modal2')">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>Very fun fact: nothing here yet xdd</p>
+            </div>
+          </div>
+        </div>
         <button class="right-button" onclick="plusSlides(1, 1)"> &#10095;</button>
       </div>
       <div class="dots">
@@ -68,17 +79,85 @@
       <h2>Hobbies</h2>
       <div class="carousel">
         <button class="left-button" onclick="plusSlides(-1, 2)">&#10094; </button>
-        <button class="carousel-button fade-carousel">
-          <h3>Hi!2</h3>
+        <!-- Slide: Games -->
+        <button onclick="openModal('modal3')" class="carousel-button fade-carousel">
+          <h3>Games</h3>
         </button>
-        <button class="carousel-button fade-carousel">
-          <h3>Bye!2</h3>
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Games</h2>
+              <span class="close" onclick="closeModal('modal3')">&times;</span>
+            </div>
+            <div class="modal-body">
+              <h3></h3>
+              <div class="img-container">
+                <div><img src="images/evernight.jpg" alt="evernight" class="modal-img"></div>
+                <ul>
+                  <li><strong>League of Legends:</strong> don't play this game</li>
+                  <li><strong>Age of Empires 4:</strong> recently started playing a bit</li>
+                  <li><strong>BoTW:</strong> haven't had time to play much, but really want to..</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide: Not sus -->
+        <button onclick="openModal('modal4')" class="carousel-button fade-carousel">
+          <h3>Not sus</h3>
         </button>
+        <div id="modal4" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Not sus</h2>
+              <span class="close" onclick="closeModal('modal4')">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>Hmmm, there seems to be nothing here...</p>
+            </div>
+            <!-- Wow you got me -->
+            <div class="modal-body" style="display: none">
+              <h3>anime, manga/manhwa, webnovels</h3>
+              <div class="img-container">
+                <div><img src="images/evernight.jpg" alt="evernight" class="modal-img"></div>
+                <ul>
+                  <li><strong>anime:</strong> fav [MDZS, Dr Stone], currently watching [Grand Blue]</li>
+                  <li><strong>manga/manhwa:</strong> fav [Spy x Family], currently reading [OP, Jibaku Shounen]</li>
+                  <li><strong>webnovels:</strong> fav [LoTM, ISSTH], currently reading [ORV]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide: New? -->
+        <button onclick="openModal('modal5')" class="carousel-button fade-carousel">
+          <h3>New?</h3>
+        </button>
+        <div id="modal5" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>New?</h2>
+              <span class="close" onclick="closeModal('modal5')">&times;</span>
+            </div>
+            <div class="modal-body">
+              <h3>Some hobbies I want to to try:</h3>
+              <div class="img-container">
+                <img src="images/yuru-camping.jpeg" alt="yuru-camping" class="modal-img">
+                <ul>
+                  <li><strong>Camping:</strong> seems fun to plan, escape from everything</li>
+                  <li><strong>Languages:</strong> maybe learn/relearn japanese for a future trip to Japan</li>
+                  <li><strong>Reading:</strong> improving general knowledge, or just for fun</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <button class="right-button" onclick="plusSlides(1, 2)"> &#10095;</button>
       </div>
       <div class="dots">
         <span class="dot" onclick="currentSlide(3, 2)"></span>
         <span class="dot" onclick="currentSlide(4, 2)"></span>
+        <span class="dot" onclick="currentSlide(5, 2)"></span>
       </div>
     </section>
     <!-- Carousel: Projects -->
@@ -86,17 +165,60 @@
       <h2>Projects</h2>
       <div class="carousel">
         <button class="left-button" onclick="plusSlides(-1, 3)">&#10094; </button>
-        <button class="carousel-button fade-carousel">
-          <h3>Hi!3</h3>
+        <!-- Slide: Personal website -->
+        <button onclick="openModal('modal6')" class="carousel-button fade-carousel">
+          <h3>Personal website</h3>
         </button>
-        <button class="carousel-button fade-carousel">
-          <h3>Bye!3</h3>
+        <div id="modal6" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Personal website</h2>
+              <span class="close" onclick="closeModal('modal6')">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>Very fun fact: nothing here yet xdd</p>
+
+            </div>
+          </div>
+        </div>
+        <!-- Slide: Zg'ang -->
+        <button onclick="openModal('modal7')" class="carousel-button fade-carousel">
+          <h3>Zg'ang</h3>
         </button>
+        <div id="modal7" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Zg'ang</h2>
+              <span class="close" onclick="closeModal('modal7')">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>Very fun fact: nothing here yet xdd</p>
+
+            </div>
+          </div>
+        </div>
+        <!-- Slide: 1531 -->
+        <button onclick="openModal('modal8')" class="carousel-button fade-carousel">
+          <h3>1531</h3>
+        </button>
+        <div id="modal8" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>1531</h2>
+              <span class="close" onclick="closeModal('modal8')">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>Very fun fact: nothing here yet xdd</p>
+
+            </div>
+          </div>
+        </div>
         <button class="right-button" onclick="plusSlides(1, 3)"> &#10095;</button>
       </div>
       <div class="dots">
-        <span class="dot" onclick="currentSlide(5, 3)"></span>
         <span class="dot" onclick="currentSlide(6, 3)"></span>
+        <span class="dot" onclick="currentSlide(7, 3)"></span>
+        <span class="dot" onclick="currentSlide(8, 3)"></span>
       </div>
     </section>
     <!-- Footer -->
